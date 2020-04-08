@@ -1,5 +1,4 @@
-from django.db.models import Field, ExpressionWrapper, Model, F, Value
-from django.db.models.functions import Now
+from django.db.models import Field, ExpressionWrapper
 from django.db.models.query import QuerySet
 from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
