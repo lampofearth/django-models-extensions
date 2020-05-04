@@ -1,4 +1,3 @@
-
 django-models-extensions: Django Models Extensions
 ==================================================
 
@@ -19,6 +18,17 @@ Or you can install from source with:
     $ git clone https://github.com/lampofearth/django-models-extensions --recursive
     $ cd django-models-extensions
     $ python setup.py install
+
+Short description
+-------------------
+
+**VirtualFunctionField** - Creates a virtual field that contains the calculated function for the fields of the current model
+
+**QuerysetExtension** - Extension of the classic QuerySet Manager
+  - as_dict
+  - as_df
+
+**AdminButtonMixin** - Convenient creation of additional buttons in the admin panel
 
 
 Examples
