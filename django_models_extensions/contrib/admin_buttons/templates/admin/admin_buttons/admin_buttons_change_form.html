@@ -1,0 +1,15 @@
+{% extends 'admin/change_form.html' %}
+{% load i18n admin_urls %}
+
+{% block object-tools %}
+	{{ block.super }}
+	<div class="submit-row" style="display: flex">
+		{% for button in change_form_buttons %}
+			{% url opts|admin_urlname:button.url original.pk|admin_urlquote as change_button_url %}
+			<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{% add_preserved_filters change_button_url %}" method="post">
+				{% csrf_token %}
+				<input type="submit" value="{% trans  button.name %}"{% include 'admin/admin_buttons/admin_buttons_attrs.html' with widget=button %}/>
+			</form>
+		{% endfor %}
+	</div>
+{% endblock %}
