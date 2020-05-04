@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="django-models-extensions",
-    version="0.0.1",
+    version="0.0.3",
     author="lampofearth",
     author_email="lampofearth@gmail.com",
     description="Models Extensions for Django.",
