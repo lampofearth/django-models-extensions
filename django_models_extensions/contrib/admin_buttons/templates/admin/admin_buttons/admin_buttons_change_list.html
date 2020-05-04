@@ -1,0 +1,11 @@
+{% extends 'admin/change_list.html' %}
+{% load i18n admin_urls %}
+
+{% block object-tools-items %}
+	{% for button in change_list_buttons %}
+		{% url cl.opts|admin_urlname:button.url as button_url %}
+		<li><a href="{% add_preserved_filters button_url is_popup to_field %}">{% trans button.name %}</a></li>
+	{% endfor %}
+	{{ block.super }}
+{% endblock %}
+
